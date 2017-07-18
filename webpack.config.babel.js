@@ -10,7 +10,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve('./', 'index.html')
+      template: path.resolve('./', 'src/index.html'),
+      filename: path.resolve('./', 'index.html')
     }),
     new webpack.HotModuleReplacementPlugin()
   ],
