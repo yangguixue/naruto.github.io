@@ -1,1 +1,8 @@
-# 主页
+## vue.js项目初体验
+
+ ```
+ yarn install
+ npm start
+ ```
+
+
