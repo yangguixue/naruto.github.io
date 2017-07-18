@@ -1,20 +1,13 @@
 import path from 'path';
 import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
+export default options => ({
   entry: path.resolve('./', 'src/main.js'),
   output: {
     path: path.resolve('./', 'dist'),
     filename: 'bundle.js'
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve('./', 'src/index.html'),
-      filename: path.resolve('./', 'index.html')
-    }),
-    new webpack.HotModuleReplacementPlugin()
-  ],
+  plugins: options.plugins,
 
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -23,13 +16,7 @@ module.exports = {
     }
   },
 
-  devServer: {
-    contentBase: "./dist",
-    port: 4001,
-    historyApiFallback: true,
-    inline: true,
-    hot: true
-  },
+  devServer: options.devServer,
 
   module: {
     rules: [
@@ -50,4 +37,4 @@ module.exports = {
       }
     ]
   }
-}
+})

@@ -6,8 +6,8 @@
   "author": "yangguixue <1306392816@qq.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server",
-    "prod": "webpack --config webpack.config.babel.js -p"
+    "dev": "webpack-dev-server --config webpack.dev.babel.js",
+    "prod": "webpack --config webpack.prod.babel.js -p"
   },
   "dependencies": {
     "path": "^0.12.7",
