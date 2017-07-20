@@ -1,16 +1,31 @@
-<template lang="html">
+<template>
   <div class="container">
     <div class="canvas">
       <canvas id="light" width="200" height="350"></canvas>
+    </div>
+    <div class="content">
+      <div class="header">
+        <Menu class="menu" />
+      </div>
+      <div class="route">
+        <router-view></router-view>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import Menu from './Menu';
+
 export default {
   mounted() {
     this.drawLight();
   },
+
+  components: {
+    Menu
+  },
+
   data() {
     return {
 
@@ -90,8 +105,24 @@ export default {
     margin: 30px auto;
     background: #fff;
     border-radius: 4px;
+    overflow: hidden;
   }
   .canvas {
+    float: left;
+    display: inline-block;
     margin-top: -31px;
   }
+  .content {
+    width: 670px;
+    float: right;
+  }
+  .header {
+    position: relative;
+    height: 30px;
+  }
+  .menu {
+    position: absolute;
+    right: -40px;
+  }
+
 </style>

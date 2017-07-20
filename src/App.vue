@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <h1 class="title">
         hello {{ name }}!
     </h1>
@@ -38,6 +38,10 @@ export default {
   body {
     color: #41b883;
     background: #263749;
+  }
+  ul, li, p {
+    margin: 0;
+    padding: 0;
   }
   .title {
     font-size: 36px;
