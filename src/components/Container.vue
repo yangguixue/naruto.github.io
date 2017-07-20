@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="container">
     <div class="canvas">
-      <canvas id="light" width="200" height="465"></canvas>
+      <canvas id="light" width="200" height="350"></canvas>
     </div>
   </div>
 </template>
@@ -21,26 +21,26 @@ export default {
       const ctx = document.getElementById('light').getContext('2d');
       ctx.beginPath();
       ctx.fillStyle = '#168856';
-      ctx.fillRect(52,0,5,350);
+      ctx.fillRect(52,0,5,250);
       ctx.fill();
 
       ctx.beginPath();
       ctx.fillStyle = '#263749';
-      ctx.fillRect(50,350,9,10);
+      ctx.fillRect(50,250,9,10);
       ctx.fill();
 
       ctx.beginPath();
       ctx.fillStyle = '#263749';
-      ctx.arc(53, 410, 50, 0, Math.PI, 1);
+      ctx.arc(53, 300, 40, 0, Math.PI, 1);
       ctx.fill();
       ctx.closePath();
 
       ctx.save();
       ctx.beginPath();
-      ctx.translate(53, 410);
+      ctx.translate(53, 300);
       ctx.fillStyle = '#263749';
       ctx.scale(1, .25);
-      ctx.arc(0, 0, 50, 0, 2 * Math.PI, false);
+      ctx.arc(0, 0, 40, 0, 2 * Math.PI, false);
       ctx.closePath();
       ctx.restore();
       ctx.fill();
@@ -48,10 +48,10 @@ export default {
 
       ctx.save();
       ctx.beginPath();
-      ctx.translate(53, 409);
+      ctx.translate(53, 299);
       ctx.scale(1, .25);
       ctx.fillStyle = '#e9f4ff';
-      ctx.arc(0, 0, 48, 0, 2 * Math.PI, false);
+      ctx.arc(0, 0, 38, 0, 2 * Math.PI, false);
       ctx.fill();
       ctx.restore();
 
@@ -63,16 +63,16 @@ export default {
 
       ctx.save();
       ctx.beginPath();
-      ctx.translate(53, 457);
+      ctx.translate(53, 340);
       ctx.fillStyle = rgd;
       ctx.scale(.5, 1);
-      ctx.arc(0, 0, 60, 0, 2 * Math.PI, false);
+      ctx.arc(0, 0, 50, 0, 2 * Math.PI, false);
       ctx.fill();
       ctx.restore();
 
       ctx.save();
       ctx.beginPath();
-      ctx.translate(53, 404);
+      ctx.translate(53, 296);
       ctx.fillStyle = '#fff';
       ctx.scale(1, .45);
       ctx.arc(0, 0, 10, 0, 2 * Math.PI, false);
@@ -85,7 +85,7 @@ export default {
 
 <style lang="css" scoped>
   .container {
-    width: 1100px;
+    width: 950px;
     padding: 30px 40px;
     margin: 30px auto;
     background: #fff;
