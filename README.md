@@ -2,7 +2,7 @@
 
  ```
  yarn install
- npm start
+ npm run dev
  ```
 
 
